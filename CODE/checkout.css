@@ -1,0 +1,226 @@
+:root{
+	--grey: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper{
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 500px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.success-section{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    margin: auto;
+    padding: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.success-section .check-icon{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border: 7px solid #bebebe;
+    border-radius: 50%;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+.success-section .check-icon::before{
+    content: "";
+    height: 101px;
+    position: absolute;
+    background-color: #bebebe;
+    transform: rotate(-45deg);
+}
+
+.success-section .check-icon::after{
+    content: "";
+    height: 101px;
+    position: absolute;
+    background-color: #bebebe;
+    transform: rotate(-45deg);
+}
+
+.success-section .check-icon .icon-line.line-tip{
+    top: 46px;
+    left: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+    animation: icon-line-tip 2s;
+}
+
+@keyframes icon-line-tip{
+    0%{
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+
+    54%{
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+
+    70%{
+        width: 50px;
+        left: -8px;
+        top: 37px;
+    }
+
+    84%{
+        width: 17px;
+        left: 21px;
+        top: 48px;
+    }
+
+    100%{
+        width: 25px;
+        left: 14px;
+        top: 45px;
+    }
+}
+
+.success-section .check-icon .icon-line{
+    background-color: #bebebe;
+    height: 7px;
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+}
+
+.success-section .check-icon .icon-line.line-long{
+    top: 38px;
+    right: 8px;
+    width: 47px;
+    transform: rotate(-45deg);
+    animation: icon-ling-long 2s;
+}
+
+@keyframes icon-ling-long{
+    0%{
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+    
+    65%{
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+
+    84%{
+        width: 55px;
+        right: 0px;
+        top: 35px;
+    }
+
+    100%{
+        width: 47px;
+        right: 8px;
+        top: 38px;
+    }
+}
+
+.success-section .check-icon .icon-circle{
+    top: -7px;
+    left: -7px;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    box-sizing: content-box;
+    border: 7px solid #bebebe;
+}
+
+.success-section .check-icon .icon-fix{
+    top: 8px;
+    width: 7px;
+    left: 26px;
+    z-index: 1;
+    height: 85px;
+    position: absolute;
+    transform: rotate(-45deg);
+    background-color: #fff;
+}
+
+.title-section{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.title{
+    color: #333;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.para{
+    color: #666;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.customer-info{
+    font-size: 12.5px;
+    text-align: center;
+    color: #333;
+    margin-top: -25px;
+    margin-bottom: 20px;
+}
+
+.submit-btn{
+    width: 100%;
+    background: #333;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 13px 24px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.submit-btn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.submit-btn:hover{
+    background: #bebebe;
+    border: 1px solid #fff;
+    color: #fff;
+}
