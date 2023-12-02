@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>login</title>
-
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form in HTML and CSS | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    <?php
 if(isset($message)){
    foreach($message as $message){
@@ -18,16 +18,28 @@ if(isset($message)){
 </head>
 <body>
 
-
-   
-<div class="form-container">
+<div class="wrapper">
+         
 
    <form action="proseslogin.php" method="post">
-      <h3>login now</h3>
-      <input type="email" name="user_email" required placeholder="enter email" class="box">
-      <input type="password" name="user_password" required placeholder="enter password" class="box">
-      <input type="submit" name="login" class="btn" value="login now">
-      <p>don't have an account? <a href="formpendaftaran.php">register now</a></p>
+   <h1>Login</h1>
+            <div class="input-box">
+
+      <input type="email" name="user_email" required placeholder="Email" required>
+      <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+      <input type="password" name="user_password" placeholder="Password" required>
+      <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+      <input type="submit" name="login" class="btn" value="Login">
+      <div class="register-link">
+                <p>Don't have an account? <a href="formpendaftaran.php">Register</a></p>
+            </div>
    </form>
 
 </div>

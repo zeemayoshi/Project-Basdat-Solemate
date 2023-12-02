@@ -73,7 +73,7 @@ if (isset($message)) {
 
 <header>
 
-<div class = "logo"><a href="shoppage.png"><img src="logo solemate.png" width = 100px height = 20px></a></div>
+<div class = "logo"><a href="shoppage.php"><img src="logo solemate.png" width = 100px height = 20px></a></div>
 <div class="icons">
             <a href="formtambahsepatu.php" class="fa fa-plus"></a>
             <a href="keranjang.php" class="fas fa-shopping-cart"></a>

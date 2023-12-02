@@ -35,20 +35,31 @@ if (isset($_POST['update_profile'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Edit Profile</title>
-
-   <!-- Custom CSS file link  -->
-   <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solemate | Profile</title>
+    <link rel="stylesheet" href="editprofile.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
+<header>
+
+<div class = "logo"><a href="shoppage.php"><img src="logo solemate.png" width = 100px height = 20px></a></div>
+<div class="icons">
+            <a href="formtambahsepatu.php" class="fa fa-plus"></a>
+            <a href="keranjang.php" class="fas fa-shopping-cart"></a>
+            <a href="profil.php" class="fas fa-user"></a>
+        </div>
+    </header>
+
 <div class="container">
 
-    <div class="user-profile">
-        <h2>Edit Profile</h2>
+<div class="wrapper">
+        <div class="wrapper1">
+
         <?php
         if (isset($message)) {
             foreach ($message as $msg) {
@@ -58,28 +69,40 @@ if (isset($_POST['update_profile'])) {
         ?>
 
         <form method="post" action="">
-            <label for="new_username">New Username:</label>
+        <h1>Edit Profile</h1>
+        <div class="input-box">
+                    <div class="input-field">
             <input type="text" id="new_username" name="new_username" value="<?php echo $fetch_user['user_name']; ?>" required>
-
-            <label for="new_email">New Email:</label>
+            <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-field">
             <input type="email" id="new_email" name="new_email" value="<?php echo $fetch_user['user_email']; ?>" required>
-    
-            <label>Password: </label>
+            <i class='bx bxs-envelope' ></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="input-field">
+                    <input type="text" id="new_telepon" name="new_telepon" value="<?php echo $fetch_user['user_telepon']; ?>" required>
+                    <i class='bx bxs-phone' ></i>
+                    </div>
+                    <div class="input-field">
 		    <input type="text" id="new_password" name="new_password" value="<?php echo $fetch_user['user_password']; ?>" required>
-
-            <label>Alamat: </label>
+            <i class='bx bxs-lock-alt' ></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="input-field">
 		    <input type="text" id="new_alamat" name="new_alamat" value="<?php echo $fetch_user['user_alamat']; ?>" required>
-
-            <label>No.Telp: </label>
-		    <input type="text" id="new_telepon" name="new_telepon" value="<?php echo $fetch_user['user_telepon']; ?>" required>
-
-            <button type="submit" name="update_profile">Update Profile</button>
-        </form>
-
-        <a href="profil.php">Back to Profile</a>
+            <i class='bx bxs-home'></i>
+                    </div>
+                </div>
+		    
+                <div class="button">
+                    <button type="submit" class="btn" name="update_profile">Update Profile</button>
+                    <button type="submit" class="btn">Cancel</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-</div>
-
 </body>
 </html>
